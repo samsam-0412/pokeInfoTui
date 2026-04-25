@@ -2,6 +2,8 @@
 
 .vs-code
 
+.vscode/settings.json
+
 .DS_Store
 
 *.txt

@@ -7,7 +7,7 @@ import (
 )
 
 func DownloadPrep(url string, pokemonName string) {
-	err := DownloadFile(url, "charmander.png")
+	err := DownloadFile(url, pokemonName)
 	if err != nil {
 		panic(err)
 	}

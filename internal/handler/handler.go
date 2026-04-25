@@ -1,11 +1,12 @@
 package handler
 
 import (
+	"fmt"
 	"log"
 	"os"
 
 	spriteDownload "pokeinfotui/internal/download"
-	imgTrim "pokeinfotui/internal/trim_image"
+	"pokeinfotui/internal/trim_image"
 
 	//drawImg "pokeinfotui/internal/image_render"
 	pokego "github.com/JoshGuarino/PokeGo/pkg"
@@ -13,19 +14,19 @@ import (
 
 func Handler(input string) string {
 	client := pokego.NewClient()
-	s, err := client.Pokemon.GetPokemon("charmander")
+	s, err := client.Pokemon.GetPokemon(input)
 	if err != nil {
 		log.Fatal(err)
 	}
 	url := s.Sprites.FrontDefault
 	filename := s.Name + ".png"
 	spriteDownload.DownloadPrep(url, filename)
-	filenameTrimmed := imgTrim.TrimImage(filename)
+	filenameTrimmed := trim_image.TrimImage(filename)
+	fmt.Println(filenameTrimmed)
 	return filenameTrimmed
 }
 
-// unused
-func remove(filename string, filenameTrimmed string) {
+func Remove(filename string, filenameTrimmed string) {
 	os.Remove(filenameTrimmed)
 	os.Remove(filename)
 }

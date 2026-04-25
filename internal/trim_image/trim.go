@@ -1,4 +1,4 @@
-package trimimage
+package trim_image
 
 import (
 	"log"
@@ -7,7 +7,7 @@ import (
 )
 
 func TrimImage(inputFilename string) string {
-	outputFilename := "charmander_trimmed.png"
+	outputFilename := inputFilename
 	imagick.Initialize()
 	defer imagick.Terminate()
 
