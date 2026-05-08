@@ -38,7 +38,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	//ttyWidth, ttyHheight, err := terminal.GetSize(0)
 	url := s.Sprites.FrontDefault
 	filename := s.Name + ".png"
 	spriteDownload.DownloadPrep(url, filename)

@@ -30,3 +30,21 @@ func Remove(filename string, filenameTrimmed string) {
 	os.Remove(filenameTrimmed)
 	os.Remove(filename)
 }
+
+func AbilityList() [100]string {
+	var stringAbilityList [100]string
+	return stringAbilityList
+	//needs inout and is still being handled in tui.go
+}
+
+func MoveList() [100]string {
+	var stringAbilityList [100]string
+	return stringAbilityList
+	//needs inout and is still being handled in tui.go
+}
+
+func stringTypes() string {
+	var stringTypes string
+	return stringTypes
+	//needs inout and is still being handled in tui.go
+}

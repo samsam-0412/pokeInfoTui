@@ -19,7 +19,6 @@ func DownloadPrep(url string, pokemonName string) {
 // It writes to the destination file as it downloads it, without
 // loading the entire file into memory.
 func DownloadFile(url string, filepath string) error {
-	// Create the file
 	out, err := os.Create(filepath)
 	if err != nil {
 		return err
